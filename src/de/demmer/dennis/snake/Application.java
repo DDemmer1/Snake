@@ -12,6 +12,16 @@ public class Application {
 	public static void main(String[] args) {
 		Board b = new Board(20);
 		
+		while(true) {
+			try {
+				Thread.sleep(500);
+				b.redrawBoard();
+				System.out.println("Sleep");
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
 	}
 
 }

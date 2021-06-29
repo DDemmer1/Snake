@@ -49,7 +49,6 @@ public class Grid {
 				blockGrid[i][j] = new Block(j, i, Color.BLUE);
 			}
 		}
-
 	}
 
 	/**
