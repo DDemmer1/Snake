@@ -5,6 +5,13 @@ import java.awt.Color;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
+/**
+ * Parent object of all entities on the board.
+ * Extends a {@link JPanel} to be displayable in a JFrame
+ * 
+ * @author Dennis
+ *
+ */
 public class Block extends JPanel {
 
 	private int blockX;

@@ -23,8 +23,11 @@ public class Board extends JFrame {
 
 	}
 
+	
 	private void initGrid() {
 		grid = new Grid(size);
+		
+		//add all Blocks to the JFrame
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
 				add(grid.getBlockGrid()[i][j]);
