@@ -10,7 +10,7 @@ import de.demmer.dennis.snake.gamefield.Board;
 public class Application {
 	
 	public static void main(String[] args) {
-		Board b = new Board(20);
+		Board b = new Board(50);
 		
 		while(true) {
 			try {

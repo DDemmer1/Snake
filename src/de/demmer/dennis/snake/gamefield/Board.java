@@ -27,6 +27,7 @@ public class Board extends JFrame {
 		setResizable(false);
 		initGrid();
 		revalidate();
+		pack();
 
 	}
 
