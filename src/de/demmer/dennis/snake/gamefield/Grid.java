@@ -62,5 +62,19 @@ public class Grid {
 			System.out.println();
 		}
 	}
+	
+	
+	public Block getBlockAt(int x, int y) {
+		return blockGrid[y][x];
+	}
+	
+	public void setBlockAt(int x, int y, Block block) {
+		blockGrid[y][x] = block;
+	}
+	
+	
+	
+	
+	
 
 }

@@ -17,12 +17,13 @@ public class Board extends JFrame {
 
 	public Board(int size) {
 		this.size = size;
-		head = new Head(5,3);
+		head = new Head(0,0);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 		setSize(new Dimension(size * 40, size * 40));
 		setLocationRelativeTo(null);
 		setLayout(new GridLayout(size, size));
+		getContentPane().setBackground(Color.black);
 		addKeyListener(new Controls());
 		setResizable(false);
 		initGrid();
@@ -47,21 +48,28 @@ public class Board extends JFrame {
 	public void redrawBoard() {
 		getContentPane().removeAll();
 		
-		//temporary dev movement
-		head.setBlockX(head.getBlockX()+1);
-		grid.getBlockGrid()[head.getBlockY()][head.getBlockX()] = head;
-		grid.getBlockGrid()[head.getBlockY()][head.getBlockX()-1] = new Block(head.getBlockX(),head.getBlockY(), Color.GREEN);
-		//
-		
-		
 		//add all Blocks again
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
 				add(grid.getBlockGrid()[i][j]);
 			}
 		}
+		
 		revalidate();
+	}
+	
+	
+	public void update() {
+		
+		//Move head
+		head.move();
+		grid.setBlockAt(head.getBlockX(), head.getBlockY(), head);
+		Block greenBlock = new Block(head.getLastX(),head.getLastY(), Color.GREEN);
+		grid.setBlockAt(head.getLastX(), head.getLastY(), greenBlock);
 		
 	}
+	
+
+	
 
 }

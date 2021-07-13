@@ -14,9 +14,9 @@ public class Application {
 		
 		while(true) {
 			try {
-				Thread.sleep(500);
+				Thread.sleep(150);
 				b.redrawBoard();
-				System.out.println("Sleep");
+				b.update();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
