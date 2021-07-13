@@ -8,7 +8,7 @@ public class SnakeConfig {
 	
 	public static final boolean DEBUG_GRID_BORDERS = false;
 	
-	public static final int TAIL_START_SIZE = 8;
+	public static final int TAIL_START_SIZE = 20;
 
 	public static final int BOARD_SIZE = 50;
 	
@@ -24,7 +24,6 @@ public class SnakeConfig {
 	public static final int START_Y = 10;
 	public static final HeadDirection START_DIRECTION = HeadDirection.RIGHT;
 
-	
 	
 	public static final int KEY_CODE_UP = 87;
 	public static final int KEY_CODE_DOWN = 83;
