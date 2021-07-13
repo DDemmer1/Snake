@@ -16,8 +16,8 @@ public class Head extends Block {
 	private int lastY;
 
 	public Head(int blockY, int blockX) {
-		super(blockY, blockX, Color.RED);
-		direction = HeadDirection.RIGHT;
+		super(blockY, blockX, SnakeConfig.HEAD_COLOR);
+		direction = SnakeConfig.START_DIRECTION;
 	}
 
 	public int getLastX() {
@@ -47,6 +47,7 @@ public class Head extends Block {
 			super.setBlockY(blockY);
 		}
 	}
+	
 	
 	@Override
 	public void setBlockX(int blockX) {

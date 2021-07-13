@@ -13,7 +13,7 @@ public class SnakeConfig {
 	public static final int BOARD_SIZE = 50;
 	
 	//lower = faster
-	public static int GAME_SPEED = 500;
+	public static int GAME_SPEED = 25;
 	
 	public static final Color BLOCK_COLOR = Color.BLACK;
 	public static final Color HEAD_COLOR = Color.RED;

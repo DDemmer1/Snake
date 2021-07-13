@@ -2,6 +2,7 @@ package de.demmer.dennis.snake.gamefield;
 
 import java.awt.Color;
 
+import de.demmer.dennis.snake.configuration.SnakeConfig;
 import de.demmer.dennis.snake.entity.Block;
 
 /**
@@ -46,7 +47,7 @@ public class Grid {
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
 				//add new Block
-				blockGrid[i][j] = new Block(j, i, Color.BLUE);
+				blockGrid[i][j] = new Block(j, i, SnakeConfig.BLOCK_COLOR);
 			}
 		}
 	}

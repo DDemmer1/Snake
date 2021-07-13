@@ -5,6 +5,8 @@ import java.awt.Color;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
+import de.demmer.dennis.snake.configuration.SnakeConfig;
+
 /**
  * Parent class of all entities on the board.
  * Extends a {@link JPanel} to be displayable in a JFrame
@@ -22,7 +24,9 @@ public class Block extends JPanel {
 		this.blockX = blockX;
 		this.blockY = blockY;
 		setBackground(color);
-		setBorder(new LineBorder(Color.BLACK));
+		if(SnakeConfig.DEBUG_GRID_BORDERS) {
+			setBorder(new LineBorder(Color.GRAY));
+		}
 	}
 
 	public int getBlockX() {

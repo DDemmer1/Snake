@@ -3,6 +3,7 @@ package de.demmer.dennis.snake.control;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import de.demmer.dennis.snake.configuration.SnakeConfig;
 import de.demmer.dennis.snake.entity.Head;
 import de.demmer.dennis.snake.entity.Head.HeadDirection;
 
@@ -16,14 +17,14 @@ public class Controls implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 
-		if (e.getKeyCode() == 87) {
+		if (e.getKeyCode() == SnakeConfig.KEY_CODE_UP) {
 			System.out.println("Nach oben");
 			if (Head.direction != HeadDirection.DOWN) {
 				Head.direction = HeadDirection.UP;
 			}
 		}
 
-		if (e.getKeyCode() == 65) {
+		if (e.getKeyCode() == SnakeConfig.KEY_CODE_LEFT) {
 			System.out.println("Nach links");
 			if (Head.direction != HeadDirection.RIGHT) {
 				Head.direction = HeadDirection.LEFT;
@@ -31,7 +32,7 @@ public class Controls implements KeyListener {
 
 		}
 
-		if (e.getKeyCode() == 83) {
+		if (e.getKeyCode() == SnakeConfig.KEY_CODE_DOWN) {
 			System.out.println("Nach unten");
 			if (Head.direction != HeadDirection.UP) {
 				Head.direction = HeadDirection.DOWN;
@@ -39,7 +40,7 @@ public class Controls implements KeyListener {
 
 		}
 
-		if (e.getKeyCode() == 68) {
+		if (e.getKeyCode() == SnakeConfig.KEY_CODE_RIGHT) {
 			System.out.println("Nach rechts");
 			if (Head.direction != HeadDirection.LEFT) {
 				Head.direction = HeadDirection.RIGHT;

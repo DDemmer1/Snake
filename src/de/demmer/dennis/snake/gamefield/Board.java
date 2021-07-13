@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import javax.swing.JFrame;
 
+import de.demmer.dennis.snake.configuration.SnakeConfig;
 import de.demmer.dennis.snake.control.Controls;
 import de.demmer.dennis.snake.entity.Block;
 import de.demmer.dennis.snake.entity.Head;
@@ -17,7 +18,7 @@ public class Board extends JFrame {
 
 	public Board(int size) {
 		this.size = size;
-		head = new Head(0,0);
+		head = new Head(SnakeConfig.START_Y, SnakeConfig.START_X);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 		setSize(new Dimension(size * 40, size * 40));
@@ -64,7 +65,7 @@ public class Board extends JFrame {
 		//Move head
 		head.move();
 		grid.setBlockAt(head.getBlockX(), head.getBlockY(), head);
-		Block greenBlock = new Block(head.getLastX(),head.getLastY(), Color.GREEN);
+		Block greenBlock = new Block(head.getLastX(),head.getLastY(), SnakeConfig.TAIL_COLOR);
 		grid.setBlockAt(head.getLastX(), head.getLastY(), greenBlock);
 		
 	}
