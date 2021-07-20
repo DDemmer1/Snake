@@ -9,12 +9,12 @@ public class Tail {
 	
 	private Queue<TailFragment> tailQueue;
 	
-	private int tailSize;
+	private int maxTailSize;
 	
 	
 	public Tail() {
 		tailQueue = new LinkedList<TailFragment>();
-		tailSize = SnakeConfig.TAIL_START_SIZE;
+		maxTailSize = SnakeConfig.TAIL_START_SIZE;
 	}
 	
 
@@ -26,12 +26,12 @@ public class Tail {
 		this.tailQueue = tailQueue;
 	}
 
-	public int getTailSize() {
-		return tailSize;
+	public int getMaxTailSize() {
+		return maxTailSize;
 	}
 
-	public void setTailSize(int tailSize) {
-		this.tailSize = tailSize;
+	public void setMaxTailSize(int maxTailSize) {
+		this.maxTailSize = maxTailSize;
 	}
 	
 	

@@ -80,7 +80,7 @@ public class Board extends JFrame {
 		
 		
 //		// if max tail size is reached -> remove last tailFrag and replace with block
-		if (tail.getTailSize() <= tail.getTailQueue().size()) {
+		if (tail.getMaxTailSize() <= tail.getTailQueue().size()) {
 			TailFragment lastTailFrag = tail.getTailQueue().poll();
 			Block emptyBlock = new Block(lastTailFrag.getBlockY(), lastTailFrag.getBlockX(), SnakeConfig.BLOCK_COLOR);
 			grid.setBlockAt(lastTailFrag.getBlockX(), lastTailFrag.getBlockY(), emptyBlock);
