@@ -13,11 +13,12 @@ public class SnakeConfig {
 	public static final int BOARD_SIZE = 50;
 	
 	//lower = faster
-	public static int GAME_SPEED = 25;
+	public static int GAME_SPEED = 30;
 	
 	public static final Color BLOCK_COLOR = Color.BLACK;
 	public static final Color HEAD_COLOR = Color.RED;
 	public static final Color TAIL_COLOR = Color.GREEN;
+	public static final Color APPLE_COLOR = Color.BLUE;
 
 
 	public static final int START_X = 10;
@@ -29,6 +30,7 @@ public class SnakeConfig {
 	public static final int KEY_CODE_DOWN = 83;
 	public static final int KEY_CODE_LEFT = 65;
 	public static final int KEY_CODE_RIGHT = 68;
+
 
 	
 	//  Alternative arrow Key Codes

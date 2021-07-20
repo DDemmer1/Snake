@@ -1,9 +1,13 @@
 package de.demmer.dennis.snake.gamefield;
 
 import java.awt.Color;
+import java.util.Random;
 
 import de.demmer.dennis.snake.configuration.SnakeConfig;
+import de.demmer.dennis.snake.entity.Apple;
 import de.demmer.dennis.snake.entity.Block;
+import de.demmer.dennis.snake.entity.Head;
+import de.demmer.dennis.snake.entity.TailFragment;
 
 /**
  * Grid system in which the player is moving and the apples spawn.
@@ -72,8 +76,36 @@ public class Grid {
 	public void setBlockAt(int x, int y, Block block) {
 		blockGrid[y][x] = block;
 	}
+
+	public void spawnApple() {
+		
+		Random rnd = new Random();
+		int rndY = rnd.nextInt(SnakeConfig.BOARD_SIZE);
+		int rndX = rnd.nextInt(SnakeConfig.BOARD_SIZE);
+		
+		while(!isFreeBlock(rndX, rndY)) {
+			rndY = rnd.nextInt(SnakeConfig.BOARD_SIZE);
+			rndX = rnd.nextInt(SnakeConfig.BOARD_SIZE);
+		}
+		
+		
+		setBlockAt(rndX, rndY, new Apple(rndY, rndX));
+		
+		
+		
+		
+	}
 	
-	
+	private boolean isFreeBlock(int x, int y) {
+		
+		if(getBlockAt(x, y) instanceof Head) {
+			return false;
+		} else if(getBlockAt(x, y) instanceof TailFragment) {
+			return false;
+		}
+		
+		return true;
+	}
 	
 	
 	
